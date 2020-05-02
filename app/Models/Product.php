@@ -8,4 +8,8 @@ class Product extends Model
 {
     //
     protected $primaryKey = 'id';
+    public function images()
+    {
+        return $this->hasMany('App\Models\ProductPicture');
+    }    
 }

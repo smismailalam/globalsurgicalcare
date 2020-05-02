@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel 5.2 CRUD Application</title>
+@extends('layouts.app')
 
-    <link href="{{ URL::to('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-</head>
-<body>
+@section('content')
 
-<h3 class="text-center"> Edit Student </h3>
-
-<div class="container-fluid">
+<div class="container">
+    <h3> Edit Product </h3>
     <div class="row">
-
+        
         @if(Session::has('flash_message'))
             <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -59,7 +50,7 @@
                     <label for="exampleInputEmail1"> Student Photo </label>
                     <input type="file" class="form-control" name="photos[]" id="photos" onchange="loadFile(event)" multiple>
                 </div>
-                <button type="submit" class="btn btn-default">Update</button>
+                <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </div>
     </div>
@@ -69,5 +60,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ URL::to('bootstrap/js/bootstrap.min.js') }}"></script>
-</body>
-</html>
+@endsection

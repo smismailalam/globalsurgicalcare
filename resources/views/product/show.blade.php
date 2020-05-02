@@ -1,37 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel 5.2 CRUD Application</title>
+@extends('layouts.app')
 
-    <link href="{{ URL::to('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-</head>
-<body>
-<h3 class="text-center"> Product Details </h3>
+@section('content')
 
-<div class="container-fluid">
+<div class="container">
+    <h3> Product Details </h3>
     <div class="row">
         <div  class="col-md-8 col-md-offset-2">
             <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Product name</th>
-                        <th>Specification</th>
-                        <th>Unit</th>
-                        <th>Price name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{ $product->name }}</td>
-                        <td>{{ $product->specification }}</td>
-                        <td>{{ $product->unit }}</td>
-                        <td>{{ $product->price }}</td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <th>Product name</th>
+                    <td>{{ $product->name }}</td>
+                </tr>
+                <tr>
+                    <th>Specification</th>
+                    <td>{{ $product->specification }}</td>
+                </tr>
+                <tr>
+                    <th>Unit</th>
+                    <td>{{ $product->unit }}</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>{{ $product->price }}</td>
+                </tr>
             </table>
+            @foreach ($product->images as $image)
+                <img style="border: 1px solid #ccc; padding:10px; border-radius:15px; height:120px" src="{{ URL::to($image->filename) }}" />    
+            @endforeach
         </div>
     </div>
 </div>
@@ -40,5 +35,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ URL::to('bootstrap/js/bootstrap.min.js') }}"></script>
-</body>
-</html>
+@endsection

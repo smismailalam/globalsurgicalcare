@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Global surgical care</title>
+@extends('layouts.app')
 
-    <link href="{{ URL::to('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-</head>
-<body>
-<h3 class="text-center"> All Products </h3>
-
-<div class="container-fluid">
+@section('content')
+<div class="container">
     <div class="row">
 
         @if(Session::has('deleted_message'))
@@ -22,7 +12,7 @@
         @endif
 
 
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-2">
             <a class="pull-right btn btn-primary" style="margin-bottom: 10px" href="{{ URL::to('/product/create') }}"> Create </a> 
             <table class="table table-striped table-bordered">
                 <thead>
@@ -89,5 +79,4 @@
         }
     }
 </script>
-</body>
-</html>
+@endsection

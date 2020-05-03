@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
 
@@ -25,7 +25,7 @@
         @endif
 
         <div class="col-md-8 col-md-offset-2">
-            <form method="POST" action="{{ URL::to('/product/update/'.$product->id) }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ URL::to('/admin/product/update/'.$product->id) }}" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
                     <label for="exampleInputEmail1"> Product Name </label>

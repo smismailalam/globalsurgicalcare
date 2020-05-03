@@ -12,17 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('auth.login');
-});
+Route::get('/', 'IndexController@index');
 Route::get('/product', 'ProductController@index');
-Route::get('/product/create', 'ProductController@create');
-Route::post('/product/save', 'ProductController@store');
-Route::get('/product/all', 'ProductController@index');
-Route::get('/product/show/{id}', 'ProductController@show');
-Route::get('/product/edit/{id}', 'ProductController@edit');
-Route::post('/product/update/{id}', 'ProductController@update');
-Route::get('/product/delete/{id}', 'ProductController@destroy');
+Route::get('/admin/product', 'Admin\ProductController@index')->name('product.index');
+Route::get('/admin/product/create', 'Admin\ProductController@create');
+Route::post('/admin/product/save', 'Admin\ProductController@store');
+Route::get('/admin/product/all', 'Admin\ProductController@index');
+Route::get('/admin/product/show/{id}', 'Admin\ProductController@show');
+Route::get('/admin/product/edit/{id}', 'Admin\ProductController@edit');
+Route::post('/admin/product/update/{id}', 'Admin\ProductController@update');
+Route::get('/admin/product/delete/{id}', 'Admin\ProductController@destroy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

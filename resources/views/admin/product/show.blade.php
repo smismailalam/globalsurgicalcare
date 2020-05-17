@@ -25,7 +25,7 @@
                 </tr>
             </table>
             @foreach ($product->images as $image)
-                <img style="border: 1px solid #ccc; padding:10px; border-radius:15px; height:120px" src="{{ URL::to($image->filename) }}" />    
+                <img style="border: 1px solid #ccc; padding:10px; border-radius:15px; height:120px" src="{{ URL::to('public/'.$image->filename) }}" />    
             @endforeach
         </div>
     </div>

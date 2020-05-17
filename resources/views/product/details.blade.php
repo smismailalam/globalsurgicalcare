@@ -13,11 +13,11 @@
                                         <div class="images">
                                             <div class="image_frame scale-with-grid" ontouchstart="this.classList.toggle('hover');">
                                                 <div class="image_wrapper">
-                                                    <a href={{ URL::to( $product->images[0]->filename) }} itemprop="image" class="woocommerce-main-image zoom" title="home_pharmacy_products3" data-rel="prettyPhoto[product-gallery]">
-                                                        <div class="mask"></div><img width="700" height="700" src={{ URL::to( $product->images[0]->filename) }} class="scale-with-grid wp-post-image" alt="home_pharmacy_products3" title="home_pharmacy_products3" />
+                                                    <a href={{ URL::to( 'public/'.$product->images[0]->filename) }} itemprop="image" class="woocommerce-main-image zoom" title="home_pharmacy_products3" data-rel="prettyPhoto[product-gallery]">
+                                                        <div class="mask"></div><img width="700" height="700" src={{ URL::to( 'public/'.$product->images[0]->filename) }} class="scale-with-grid wp-post-image" alt="home_pharmacy_products3" title="home_pharmacy_products3" />
                                                     </a>
                                                     <div class="image_links">
-                                                        <a href={{ URL::to( $product->images[0]->filename) }} itemprop="image" class="woocommerce-main-image zoom" title="home_pharmacy_products3"><i class="icon-search"></i></a>
+                                                        <a href={{ URL::to( 'public/'.$product->images[0]->filename) }} itemprop="image" class="woocommerce-main-image zoom" title="home_pharmacy_products3"><i class="icon-search"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -25,8 +25,8 @@
                                                 @foreach ($product->images as $image)
                                                     <div class="image_frame scale-with-grid" ontouchstart="this.classList.toggle('hover');">
                                                         <div class="image_wrapper">
-                                                            <a href={{ URL::to($image->filename) }} itemprop="image" class="woocommerce-main-image zoom" title="home_pharmacy_products1" data-rel="prettyPhoto[product-gallery]">
-                                                                <div class="mask"></div><img width="180" height="180" src={{ URL::to($image->filename) }} class="attachment-shop_thumbnail size-shop_thumbnail" alt="home_pharmacy_products1" />
+                                                            <a href={{ URL::to('public/'.$image->filename) }} itemprop="image" class="woocommerce-main-image zoom" title="home_pharmacy_products1" data-rel="prettyPhoto[product-gallery]">
+                                                                <div class="mask"></div><img width="180" height="180" src={{ URL::to('public/'.$image->filename) }} class="attachment-shop_thumbnail size-shop_thumbnail" alt="home_pharmacy_products1" />
                                                             </a>
                                                         </div>
                                                     </div>

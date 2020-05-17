@@ -41,7 +41,7 @@
                                     <div class="image_frame scale-with-grid product-loop-thumb" ontouchstart="this.classList.toggle('hover');">
                                         <div class="image_wrapper">
                                             <a href={{ URL('product/detail' , $product->id) }}>
-                                                <div class="mask"></div><img width="700" height="700" src={{ URL::to( $product->images[0]->filename) }} class="scale-with-grid wp-post-image" alt="home_pharmacy_products1" />
+                                                <div class="mask"></div><img width="700" height="700" src={{ URL::to( 'public/'.$product->images[0]->filename) }} class="scale-with-grid wp-post-image" alt="home_pharmacy_products1" />
                                             </a>
                                             <div class="image_links double">
                                                 <a rel="nofollow" href="content/pharmacy/index7fd8.html?add-to-cart=99" data-quantity="1" data-product_id="99" class="add_to_cart_button ajax_add_to_cart product_type_simple"></a><a class="link"  href={{ URL('product/detail' , $product->id) }}></a> </div>

@@ -58,14 +58,14 @@
                                         <li class="isotope-item product type-product has-post-thumbnail  shipping-taxable purchasable product-type-simple instock">
                                             <div class="image_frame scale-with-grid product-loop-thumb" ontouchstart="this.classList.toggle('hover');">
                                                 <div class="image_wrapper">
-                                                    <a href="content/pharmacy/product-page.html">
+                                                    <a  href={{ URL('product/detail' , $product->id) }}>
                                                         <div class="mask"></div><img width="700" height="700" src={{ URL::to( $product->images[0]->filename) }} class="scale-with-grid wp-post-image" alt="home_pharmacy_products1" />
                                                     </a>
                                                     <div class="image_links double">
-                                                        <a rel="nofollow" href="content/pharmacy/index7fd8.html?add-to-cart=99" data-quantity="1" data-product_id="99" class="add_to_cart_button ajax_add_to_cart product_type_simple"></a><a class="link" href="content/pharmacy/product-page.html"></a> </div>
-                                                </div><a href="content/pharmacy/product-page.html"><span class="product-loading-icon added-cart"></span></a> </div>
+                                                        <a rel="nofollow" href="content/pharmacy/index7fd8.html?add-to-cart=99" data-quantity="1" data-product_id="99" class="add_to_cart_button ajax_add_to_cart product_type_simple"></a><a class="link"  href={{ URL('product/detail' , $product->id) }}></a> </div>
+                                                </div><a  href={{ URL('product/detail' , $product->id) }}><span class="product-loading-icon added-cart"></span></a> </div>
                                             <div class="desc">
-                                                <h4><a href="content/pharmacy/product-page.html">{{ $product->name }}</a></h4>
+                                                <h4><a  href={{ URL('product/detail' , $product->id) }}>{{ $product->name }}</a></h4>
                                                 
                                             </div>
                                         </li>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="column mcb-column one column_column">
                     <div class="column_attr align_center">
-                        <a class="button  button_full_width button_size_2 button_js" href="content/pharmacy/shop.html"><span class="button_label">Show all</span></a> </div>
+                        <a class="button  button_full_width button_size_2 button_js" href={{ URL('/product') }}><span class="button_label">Show all</span></a> </div>
                 </div>
             </div>
         </div>
@@ -155,7 +155,7 @@
                 </div>
                 <div class="column mcb-column one column_column">
                     <div class="column_attr align_center">
-                        <a class="button  button_full_width button_size_2 button_js" href="content/pharmacy/shop.html"><span class="button_label">Show all</span></a> </div>
+                        <a class="button  button_full_width button_size_2 button_js" href={{ URL('/articles') }}><span class="button_label">Show all</span></a> </div>
                 </div>
             </div>
         </div>

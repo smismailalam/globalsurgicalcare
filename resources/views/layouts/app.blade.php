@@ -65,19 +65,19 @@
                                                     <a href={{ URL('/product') }}><span>Products</span></a> 
                                                 </li>
                                                 <li>
-                                                    <a href="content/pharmacy/articles.html"><span>Articles</span></a>
+                                                    <a href={{ URL('/articles') }}><span>Articles</span></a>
                                                 </li>
                                                 <li>
-                                                    <a href="content/pharmacy/certificates.html"><span>Certificates</span></a>
+                                                    <a href={{ URL('/certificates') }}><span>Certificates</span></a>
                                                 </li>
                                                 <li>
-                                                    <a href="content/pharmacy/bankDetails.html"><span>Bank Details</span></a>
+                                                    <a href={{ URL('/bankdetails') }}><span>Bank Details</span></a>
                                                 </li>
                                                 <li>
-                                                    <a href="content/pharmacy/aboutus.html"><span>About Us</span></a>
+                                                    <a href={{ URL('/aboutus') }}><span>About Us</span></a>
                                                 </li>
                                                 <li>
-                                                    <a href="content/pharmacy/contact.html"><span>Contact</span></a>
+                                                    <a href={{ URL('/contact') }}><span>Contact</span></a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -102,7 +102,7 @@
             <footer id="Footer" class="clearfix">
                 <div class="widgets_wrapper" style="padding:40px 0 10px;">
                     <div class="container">
-                        <div class="column one-fourth">
+                        <div class="column one-third">
                             <aside class="widget widget_text">
                                 <div class="textwidget">
                                     <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
@@ -111,28 +111,7 @@
                                 </div>
                             </aside>
                         </div>
-                        <div class="column one-fourth">
-                            <aside class="widget widget_text">
-                                <h4>Delete This</h4>
-                                <div class="textwidget">
-                                    <ul style="line-height: 32px;">
-                                        <li>
-                                            <i class="icon-layout" style="color: #4179a0;"></i><a href="#">Duis sed odio sit</a>
-                                        </li>
-                                        <li>
-                                            <i class="icon-layout" style="color: #4179a0;"></i><a href="#">Morbi accum ipsum</a>
-                                        </li>
-                                        <li>
-                                            <i class="icon-layout" style="color: #4179a0;"></i><a href="#">Nam nec tellus </a>
-                                        </li>
-                                        <li>
-                                            <i class="icon-layout" style="color: #4179a0;"></i><a href="#">Class aptent taciti</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </aside>
-                        </div>
-                        <div class="column one-fourth">
+                        <div class="column one-third">
                             <aside class="widget widget_text">
                                 <h4>Quick Access</h4>
                                 <div class="textwidget">
@@ -159,7 +138,7 @@
                                 </div>
                             </aside>
                         </div>
-                        <div class="column one-fourth">
+                        <div class="column one-third">
                             <aside id="text-6" class="widget widget_text">
                                 <h4>Contact centre</h4>
                                 <div class="textwidget">
@@ -191,24 +170,24 @@
     </div>
 
     <!-- JS -->
-    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src= {{ URL("js/jquery-2.1.4.min.js") }}></script>
 
-    <script src="js/mfn.menu.js"></script>
-    <script src="js/jquery.plugins.js"></script>
-    <script src="js/jquery.jplayer.min.js"></script>
-    <script src="js/animations/animations.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src={{ URL("js/mfn.menu.js") }}></script>
+    <script src={{ URL("js/jquery.plugins.js") }}></script>
+    <script src={{ URL("js/jquery.jplayer.min.js") }}></script>
+    <script src={{ URL("js/animations/animations.js") }}></script>
+    <script src={{ URL("js/scripts.js") }}></script>
 
-    <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="plugins/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
-    <script src="plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="plugins/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src={{ URL("plugins/rs-plugin/js/jquery.themepunch.tools.min.js") }}></script>
+    <script src={{ URL("plugins/rs-plugin/js/jquery.themepunch.revolution.min.js") }}></script>
+    <script src={{ URL("plugins/rs-plugin/js/extensions/revolution.extension.video.min.js") }}></script>
+    <script src={{ URL("plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js") }}></script>
+    <script src={{ URL("plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js") }}></script>
+    <script src={{ URL("plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js") }}></script>
+    <script src={{ URL("plugins/rs-plugin/js/extensions/revolution.extension.kenburn.min.js") }}></script>
+    <script src={{ URL("plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js") }}></script>
+    <script src={{ URL("plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js") }}></script>
+    <script src={{ URL("plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js") }}></script>
 
     <script>
         var tpj = jQuery;

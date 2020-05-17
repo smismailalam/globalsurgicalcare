@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', 'IndexController@index');
 Route::get('/product', 'ProductController@index');
+Route::get('/product/detail/{id}', 'ProductController@detail');
+Route::get('/contact', 'ContactController@index');
+Route::get('/aboutus', 'AboutusController@index');
+Route::get('/articles', 'ArticleController@index');
+Route::get('/bankdetails', 'BankdetailController@index');
+Route::get('/certificates', 'CertificateController@index');
 Route::get('/admin/product', 'Admin\ProductController@index')->name('product.index');
 Route::get('/admin/product/create', 'Admin\ProductController@create');
 Route::post('/admin/product/save', 'Admin\ProductController@store');

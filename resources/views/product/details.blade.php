@@ -39,30 +39,20 @@
                                         
                                         <br style="clear:both;" />
                                         
-                                        <form class="cart" method="post" enctype='multipart/form-data'>
+                                        <button class="single_add_to_cart_button button alt">
+                                            Ask Price
+                                        </button>
+                                        {{-- <form class="cart" method="post" enctype='multipart/form-data'>
                                         
-                                            <button type="submit" class="single_add_to_cart_button button alt">
-                                                Ask Price
-                                            </button>
-                                        </form>
+                                        </form> --}}
                                         <div class="accordion">
                                             <div class="mfn-acc accordion_wrapper open1st">
                                                 <div class="question">
                                                     <div class="title">
                                                         <i class="icon-plus acc-icon-plus"></i><i class="icon-minus acc-icon-minus"></i> Specifications
                                                     </div>
-                                                    <div class="answer">
-                                                        
-                                                           <h4>Mask Size:</h4><p>17.5cm*9.5cm (For Adult)</p> 
-                                                           <h4>Non-Sterlize</h4>
-
-                                                           <h4>Mask layers: 3</h4>
-                                                           <ul>
-                                                               <li>non-woven fabric</li>
-                                                               <li>melt blown cloth</li>
-                                                               <li>non-woven fabric</li>
-                                                           </ul> 
-                                                            <h4>Standard:</h4><p>EN14683:2005</p>
+                                                    <div class="answer">                                                        
+                                                    <p>{{ $product->specification }}</p> 
                                                     </div>
                                                 </div>
                                                 <div class="question">
@@ -70,10 +60,7 @@
                                                         <i class="icon-plus acc-icon-plus"></i><i class="icon-minus acc-icon-minus"></i> Packing / Weight Description
                                                     </div>
                                                     <div class="answer">
-                                                        <h4>10pcs/bag</h4>
-                                                        <h4>100bags/carton</h4>
-                                                        <h4>Carton Size:</h4><p>57*30*53cm</p>
-                                                        <h4>GW:</h4><p>9.7kg</p>
+                                                    <h4>{{ $product->unit }} </h4>
                                                     </div>
                                                 </div>
                                             </div>

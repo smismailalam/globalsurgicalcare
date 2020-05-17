@@ -19516,3 +19516,7 @@ a.action_button:hover{text-decoration:none}
 #Content.no-padding, .template-slider #Content, .with_aside #Content {
     padding-top: 0px !important;
 }
+.logo-main {
+	width: 190px !important;
+	max-height: 60px !important;
+}
